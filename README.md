@@ -2,6 +2,9 @@
 
 📖 Digital Library with NFT-Signed Assets
 
+PPT : https://docs.google.com/presentation/d/1hJSaLYlNNMWHZMSy8Z5qBeuTpsGLvexoQMZw3C36qTQ/edit?usp=sharing
+Notion : https://www.notion.so/CODEX-2025-275b503ecf6b80cc9fe3ef6a6c9f4068?source=copy_link
+
 A decentralized Digital Library where contributors create AI-generated images, sign them with NFTs, and protect ownership rights. Each contributor’s creativity is tokenized and secured, ensuring exclusive ownership while preventing unauthorized access.
 
 ✨ Features

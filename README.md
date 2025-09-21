@@ -28,26 +28,88 @@ Storage → IPFS / Database for metadata + assets
 
 Backend → Node.js / FastAPI (API handling)
 
-🔄** Workflow** workflow - image (./workflow.png) ---> (./workflow.png) 
-                                                              |
-                                                              |
-                                                              |
-                                                              |
-                                 (./workflow.png) ---> (./workflow.png) 
+🔄**Workflow**
 
-🚀** How It Works**
+       ┌───────────────┐
+       │ User Browser  │
+       └───────┬───────┘
+               │
+       ┌───────▼─────────┐
+       │ Frontend - React│
+       │ (Next JS)       │
+       └───────┬─────────┘
+               │
+       ┌───────▼──────────┐
+       │ Backend -        │
+       │ Node.js / FastAPI│
+       └───────┬──────────┘
+               │
+       ┌───────▼───────────────┐
+       │ NFT Metadata & Asset  │
+       │ Storage (IPFS/DB)     │
+       └───────────────────────┘
 
--- Contributor creates an AI prompt → Generates unique image.
+                   
+**User also interacts directly with:**
 
--- Image is minted as NFT (using MeshJS + Cardano).
+       ┌─────────────────────────┐
+       │ Cardano Wallet          │
+       │ Nami                    │
+       └───────────┬─────────────┘
+                   │
+           ┌───────▼────────┐
+           │ Blockchain -   │
+           │ Cardano        │
+           └───────┬────────┘
+                   │
+           ┌───────▼────────┐
+           │ NFT Metadata & │
+           │ Asset Storage  │
+           └────────────────┘
 
--- Metadata stored via CIP-25 standard (IPFS + Blockchain).
 
--- Contributor owns signed NFT in their wallet.
 
--- Digital assets are protected → No cross-access between contributors.
+🚀**How It Works**
 
-🤝 Contributors
+**-- Contributor provides an AI prompt**
+
+The user enters a unique description, which is sent to an AI model to generate a one-of-a-kind image.
+
+**-- Image is minted as an NFT**
+
+The generated image is uploaded to Firebase Storage, and its public URL is used to mint an NFT on Cardano using MeshJS.
+
+**-- Metadata stored via CIP-25 standard**
+
+The NFT metadata, including the image URL and prompt, is formatted according to the Cardano CIP-25 NFT standard and stored on the blockchain (optionally referencing IPFS for long-term storage).
+
+**-- Contributor owns the signed NFT**
+
+The NFT is sent directly to the contributor’s Cardano wallet, giving them verifiable ownership.
+
+**-- Digital assets are protected**
+
+Each contributor’s assets are isolated—there is no cross-access between contributors, ensuring privacy and security.
+
+**-- Optional additions for clarity:**
+
+**a. Wallet Integration:**
+
+Contributors connect their Cardano wallet (via MeshJS) to receive and manage their NFTs.
+
+**b. Preview Before Minting:**
+
+Contributors can preview the generated AI image before minting it as an NFT.
+
+**c. Collection Support:**
+
+NFTs can be grouped into collections for easier discovery and management (if you support this).
+
+**d. Open Source & Extensible:**
+
+The platform is open source and can be extended to support other storage backends (e.g., IPFS, Arweave) or blockchains.
+
+🤝 **Contributors**
 
 -- We welcome all creative contributors to join and showcase their AI + NFT-powered artworks.
 

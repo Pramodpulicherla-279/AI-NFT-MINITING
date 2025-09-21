@@ -1,4 +1,4 @@
-# AI-NFT-MINITING
+# AI-NFT-MINTING
 
 📖 Digital Library with NFT-Signed Assets
 
